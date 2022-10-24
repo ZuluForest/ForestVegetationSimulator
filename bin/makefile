@@ -200,7 +200,7 @@ else
 endif
 
 %.mod : %.f $(includes)
-	$(FCprf)$(FC) $(FFLAGS) -c $<
+	$(FCprf)$(FC) $(FFLAGS) -c -0 $<
 
 %.o : %.f $(includes) $(mods_mods)
 	$(FCprf)$(FC) $(FFLAGS) -c -o $@ $<
