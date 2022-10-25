@@ -82,7 +82,7 @@ ifdef sourceFileList
  ifndef sourceList
   export sourceFileList
   export sourceList = $(shell cat $(sourceFileList))
-  export includes = $(notdir $(filter %.F77 %.INC %.h,$(sourceList)))
+  export includes = $(notdir $(filter %.F77 %.inc %.INC %.h,$(sourceList)))
   export mods = $(notdir $(filter %_mod.f, $(sourceList)))
   export mods_mods = $(addsuffix .mod,$(basename $(mods)))
   export source = $(notdir $(filter %.c %.f %.F %.for %.cpp, $(sourceList)))
@@ -200,7 +200,7 @@ else
 endif
 
 %.mod : %.f $(includes)
-	$(FCprf)$(FC) $(FFLAGS) -c $<
+	$(FCprf)$(FC) $(FFLAGS) -c -o $<
 
 %.o : %.f $(includes) $(mods_mods)
 	$(FCprf)$(FC) $(FFLAGS) -c -o $@ $<

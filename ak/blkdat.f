@@ -77,7 +77,7 @@ C  19     AS   quaking aspen       746  POTR5  Populus tremuloides
 C  20     CW   black cottonwood    747  POBAT  Populus balsamifera 
 C                                              ssp. trichocarpa
 C  21     WI   willow              920  SALIX  Salix
-C  22     SU   Scouler’s willow    928  SASC   Salix scouleriana
+C  22     SU   Scoulerï¿½s willow    928  SASC   Salix scouleriana
 C  23     OH   other hardwood      998  2TB
 C
 C----------
@@ -143,9 +143,9 @@ C
 C    OCURFT SETS SPECIES OCCURANCE BY FOREST TYPE (0-NO, 1-YES)
 C    OCURFT DIMENSIONED (MAXSP (23),FOREST TYPE (14))
 C
-      DATA ((OCURFT(I,J),I=1,MAXSP),J=1,14)/
 C    &  SF,  AF,  YC,  TA,  WS,  LS,  BE,  SS,  LP,  RC,  WH,  MH,  OS,
 C    &  AD,  RA,  PB,  AB,  BA,  AS,  CW,  WI,  SU,  OH
+      DATA ((OCURFT(I,J),I=1,MAXSP),J=1,14)/
      & 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, ! 122 WHITE SPRUCE
      & 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0,
 C
